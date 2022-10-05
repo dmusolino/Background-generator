@@ -2,12 +2,31 @@ var css = document.querySelector("h3")
 
 var color1 = document.querySelector(".color1") 
 var color2 = document.querySelector(".color2")
+var body = document.getElementById("background")
 
-color1.addEventListener("input", function() {
+function setGradient() 
 
-console.log(color1.value);})
+{body.style.background = 
+    
+    "linear-gradient(to right, "
+    + color1.value 
+    + "," 
+    + color2.value
+    +")"
+
+}
+
+function setGradient2() {
+
+        body.style.background = 
+        
+        "linear-gradient(to right, "
+        + color1.value 
+        + "," 
+        + color2.value
+        +")"}
 
 
-color2.addEventListener("input", function() {
+color1.addEventListener("input", setGradient);
 
-    console.log(color2.value);})
+color2.addEventListener("input", setGradient2);
